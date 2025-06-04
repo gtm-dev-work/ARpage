@@ -1,12 +1,12 @@
-
 import { Button } from "@/components/ui/button";
 
 export const ARCardDemo = () => {
   return (
     <section className="py-20 relative">
       <div className="container mx-auto px-4">
+        {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="font-orbitron font-bold text-3xl md:text-5xl mb-6 text-white">
+          <h2 className="font-orbitron font-bold text-3xl md:text-5xl mb-4 text-white">
             AR Visiting Card <span className="text-neon-cyan">Demo</span>
           </h2>
           <p className="text-xl text-white/60 max-w-2xl mx-auto">
@@ -14,20 +14,23 @@ export const ARCardDemo = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left - Traditional Card */}
+        {/* Card Comparison */}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Traditional Card */}
             <div className="text-center">
-              <h3 className="font-orbitron font-bold text-xl mb-6 text-white/60">Traditional Business Card</h3>
+              <h3 className="font-orbitron font-bold text-xl mb-6 text-white/60">
+                Traditional Business Card
+              </h3>
               <div className="relative mx-auto w-80 h-48 bg-white rounded-2xl p-6 shadow-2xl">
                 <div className="text-dark-bg">
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-neon-cyan to-neon-purple rounded-lg"></div>
+                    <div className="w-12 h-12 bg-gradient-to-r from-neon-cyan to-neon-purple rounded-lg" />
                     <span className="text-sm font-semibold">The Ad Project</span>
                   </div>
-                  <h4 className="font-orbitron font-bold text-lg mb-2">Goutam Kumar</h4>
-                  <p className="text-sm mb-4">Founder & CEO</p>
-                  <div className="text-xs space-y-1">
+                  <h4 className="font-orbitron font-bold text-lg mb-1">Goutam Kumar</h4>
+                  <p className="text-sm mb-3">Founder & CEO</p>
+                  <div className="text-xs space-y-1 text-left">
                     <p>📧 goutam@theadproject.in</p>
                     <p>📱 +91 98765 43210</p>
                     <p>🌐 theadproject.in</p>
@@ -36,35 +39,48 @@ export const ARCardDemo = () => {
               </div>
             </div>
 
-            {/* Right - AR Card */}
+            {/* AR Card */}
             <div className="text-center">
-              <h3 className="font-orbitron font-bold text-xl mb-6 text-neon-cyan">AR Business Card</h3>
+              <h3 className="font-orbitron font-bold text-xl mb-6 text-neon-cyan">
+                AR Business Card
+              </h3>
               <div className="relative">
-                {/* AR Card Container */}
-                <div className="relative mx-auto w-80 h-48 bg-gradient-to-br from-neon-cyan/20 to-neon-purple/20 backdrop-blur-sm rounded-2xl p-6 border border-neon-cyan/30 animate-glow">
-                  {/* 3D Avatar */}
-                  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-neon-cyan to-neon-purple rounded-full flex items-center justify-center animate-float">
+                <div className="relative mx-auto w-80 h-64 bg-gradient-to-br from-neon-cyan/20 to-neon-purple/20 backdrop-blur-sm rounded-2xl p-6 border border-neon-cyan/30 animate-glow">
+                  {/* Floating Avatar */}
+                  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-neon-cyan to-neon-purple rounded-full flex items-center justify-center animate-float shadow-lg">
                     <span className="text-2xl">👤</span>
                   </div>
-                  
-                  <div className="text-white pt-8">
-                    <h4 className="font-orbitron font-bold text-lg mb-2">Goutam Kumar</h4>
+
+                  <div className="text-white pt-10">
+                    <h4 className="font-orbitron font-bold text-lg mb-1">Goutam Kumar</h4>
                     <p className="text-sm mb-4 text-neon-cyan">Founder & CEO</p>
-                    
-                    {/* Interactive Elements */}
+
+                    {/* Action Buttons */}
                     <div className="space-y-2">
-                      <Button size="sm" variant="outline" className="w-full border-neon-cyan/50 text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg text-xs">
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="w-full border-neon-cyan/50 text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg text-xs"
+                      >
                         📧 Send Email
                       </Button>
-                      <Button size="sm" variant="outline" className="w-full border-neon-purple/50 text-neon-purple hover:bg-neon-purple hover:text-dark-bg text-xs">
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="w-full border-neon-purple/50 text-neon-purple hover:bg-neon-purple hover:text-dark-bg text-xs"
+                      >
                         💬 WhatsApp
                       </Button>
-                      <Button size="sm" variant="outline" className="w-full border-blue-400/50 text-blue-400 hover:bg-blue-400 hover:text-dark-bg text-xs">
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="w-full border-blue-400/50 text-blue-400 hover:bg-blue-400 hover:text-dark-bg text-xs"
+                      >
                         💼 LinkedIn
                       </Button>
                     </div>
                   </div>
-                  
+
                   {/* AR Effects */}
                   <div className="absolute inset-0 pointer-events-none">
                     {[...Array(8)].map((_, i) => (
@@ -87,7 +103,7 @@ export const ARCardDemo = () => {
                     <div className="w-8 h-8 bg-gradient-to-r from-neon-cyan to-neon-purple rounded-full flex items-center justify-center animate-pulse-glow">
                       <span className="text-sm">🗣️</span>
                     </div>
-                    <p className="text-white/80 text-sm italic">
+                    <p className="text-white/80 text-sm italic text-left">
                       "Hello! I'm Goutam from The Ad Project. Tap the buttons to connect with me instantly!"
                     </p>
                   </div>
@@ -96,27 +112,27 @@ export const ARCardDemo = () => {
             </div>
           </div>
 
-          {/* Features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
-            <div className="text-center p-6 bg-white/5 rounded-xl backdrop-blur-sm">
-              <div className="text-3xl mb-3">🎯</div>
-              <h4 className="font-orbitron font-bold text-white mb-2">Interactive</h4>
-              <p className="text-white/60 text-sm">Direct links to email, calls, and social media</p>
-            </div>
-            <div className="text-center p-6 bg-white/5 rounded-xl backdrop-blur-sm">
-              <div className="text-3xl mb-3">📊</div>
-              <h4 className="font-orbitron font-bold text-white mb-2">Analytics</h4>
-              <p className="text-white/60 text-sm">Track scans, interactions, and conversions</p>
-            </div>
-            <div className="text-center p-6 bg-white/5 rounded-xl backdrop-blur-sm">
-              <div className="text-3xl mb-3">🌐</div>
-              <h4 className="font-orbitron font-bold text-white mb-2">Shareable</h4>
-              <p className="text-white/60 text-sm">Easy to share and update in real-time</p>
-            </div>
+          {/* Feature Highlights */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
+            {[
+              { icon: "🎯", title: "Interactive", text: "Direct links to email, calls, and social media" },
+              { icon: "📊", title: "Analytics", text: "Track scans, interactions, and conversions" },
+              { icon: "🌐", title: "Shareable", text: "Easy to share and update in real-time" },
+            ].map((feature, idx) => (
+              <div
+                key={idx}
+                className="text-center p-6 bg-white/5 rounded-xl backdrop-blur-sm"
+              >
+                <div className="text-3xl mb-3">{feature.icon}</div>
+                <h4 className="font-orbitron font-bold text-white mb-2">{feature.title}</h4>
+                <p className="text-white/60 text-sm">{feature.text}</p>
+              </div>
+            ))}
           </div>
 
+          {/* CTA */}
           <div className="text-center mt-12">
-            <Button 
+            <Button
               size="lg"
               className="bg-gradient-to-r from-neon-cyan to-neon-purple text-white hover:opacity-90 px-8 py-4"
             >
