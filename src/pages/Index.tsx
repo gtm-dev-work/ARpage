@@ -10,7 +10,6 @@ import { SmartIndiaSection } from "@/components/SmartIndiaSection";
 import { EcoFriendlySection } from "@/components/EcoFriendlySection";
 import { FinalCTASection } from "@/components/FinalCTASection";
 import { Navigation } from "@/components/Navigation";
-import { ARAssistantTrigger } from "@/components/ARAssistantTrigger";
 
 const Index = () => {
   return (
@@ -26,7 +25,6 @@ const Index = () => {
       <SmartIndiaSection />
       <EcoFriendlySection />
       <FinalCTASection />
-      <ARAssistantTrigger />
     </div>
   );
 };
