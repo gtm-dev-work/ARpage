@@ -21,7 +21,7 @@ export const DroneAdDemo = () => {
           <div className="relative bg-gradient-to-br from-neon-cyan/10 to-neon-purple/10 backdrop-blur-sm rounded-3xl p-8 border border-neon-cyan/20">
             <div className="h-96 w-full rounded-2xl overflow-hidden shadow-xl">
               <img 
-                src="https://cdn.pixabay.com/photo/2022/08/09/11/39/drone-advertising-7374490_1280.jpg"
+                src="https://raw.githubusercontent.com/gtm-dev-work/ARpage/refs/heads/main/public/Gemini_Generated_Image_v8ggdov8ggdov8gg-min.png"
                 alt="Drone Ad Preview"
                 className="w-full h-full object-cover"
               />
