@@ -7,7 +7,6 @@ import { DroneAdDemo } from "@/components/DroneAdDemo";
 import { ARCardDemo } from "@/components/ARCardDemo";
 import { AnalyticsSection } from "@/components/AnalyticsSection";
 import { SmartIndiaSection } from "@/components/SmartIndiaSection";
-import { EcoFriendlySection } from "@/components/EcoFriendlySection";
 import { FinalCTASection } from "@/components/FinalCTASection";
 import { Navigation } from "@/components/Navigation";
 
@@ -23,7 +22,6 @@ const Index = () => {
       <ARCardDemo />
       <AnalyticsSection />
       <SmartIndiaSection />
-      <EcoFriendlySection />
       <FinalCTASection />
     </div>
   );
