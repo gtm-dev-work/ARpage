@@ -52,7 +52,7 @@ export const HeroSection = () => {
           <div className="relative mb-8">
             <div className="w-32 h-32 mx-auto mb-6 relative">
               <img 
-                src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=400&fit=crop" 
+                src="https://raw.githubusercontent.com/gtm-dev-work/ARpage/refs/heads/main/public/indian%20map.jpg" 
                 alt="India Map Visualization" 
                 className="w-full h-full object-cover rounded-2xl opacity-60 animate-glow"
               />
