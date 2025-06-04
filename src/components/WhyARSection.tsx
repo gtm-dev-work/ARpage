@@ -18,7 +18,7 @@ export const WhyARSection = () => {
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-red-500/30">
               <h3 className="font-orbitron font-bold text-xl mb-4 text-red-400">Traditional Advertising</h3>
               <img 
-                src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop" 
+                src="https://raw.githubusercontent.com/gtm-dev-work/ARpage/refs/heads/main/public/Gemini_Generated_Image_el1mpgel1mpgel1m.jfif" 
                 alt="Traditional billboard" 
                 className="w-full h-48 object-cover rounded-lg mb-4 opacity-60"
               />
@@ -36,7 +36,7 @@ export const WhyARSection = () => {
             <div className="bg-gradient-to-br from-neon-cyan/10 to-neon-purple/10 backdrop-blur-sm rounded-2xl p-8 border border-neon-cyan/30 animate-glow">
               <h3 className="font-orbitron font-bold text-xl mb-4 text-neon-cyan">AR-Enhanced Advertising</h3>
               <img 
-                src="https://images.unsplash.com/photo-1500673922987-e212871fec22?w=600&h=400&fit=crop" 
+                src="https://raw.githubusercontent.com/gtm-dev-work/ARpage/refs/heads/main/public/ChatGPT%20Image%20Jun%204%2C%202025%2C%2009_43_44%20PM-min.png" 
                 alt="AR billboard transformation" 
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
