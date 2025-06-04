@@ -1,4 +1,6 @@
 
+import { Button } from "@/components/ui/button";
+
 export const AnalyticsSection = () => {
   return (
     <section id="analytics" className="py-20 relative">
