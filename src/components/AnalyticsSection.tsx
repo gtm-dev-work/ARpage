@@ -1,7 +1,18 @@
-
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 
 export const AnalyticsSection = () => {
+  const { toast } = useToast();
+
+  const handleAccessAnalytics = () => {
+    console.log("Access AR Analytics clicked");
+    toast({
+      title: "Analytics Dashboard",
+      description: "Opening comprehensive AR analytics platform...",
+    });
+    // Backend integration point: Navigate to analytics dashboard
+  };
+
   return (
     <section id="analytics" className="py-20 relative">
       <div className="container mx-auto px-4">
@@ -154,6 +165,7 @@ export const AnalyticsSection = () => {
           <Button 
             size="lg"
             className="bg-gradient-to-r from-neon-cyan to-neon-purple text-white hover:opacity-90 px-8 py-4"
+            onClick={handleAccessAnalytics}
           >
             Access AR Analytics
           </Button>

@@ -1,8 +1,29 @@
 
 import { Button } from "@/components/ui/button";
 import { Camera } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 export const HeroSection = () => {
+  const { toast } = useToast();
+
+  const handleLaunchAR = () => {
+    console.log("Launch AR Experience clicked");
+    toast({
+      title: "AR Experience Starting",
+      description: "Initializing AR camera and location detection...",
+    });
+    // Backend integration point: Launch AR experience
+  };
+
+  const handleWatchDemo = () => {
+    console.log("Watch Demo clicked");
+    toast({
+      title: "Demo Loading",
+      description: "Opening video demonstration...",
+    });
+    // Backend integration point: Load demo video/content
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Animated background */}
@@ -10,7 +31,6 @@ export const HeroSection = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,242,255,0.1),transparent)] animate-pulse-glow"></div>
       </div>
 
-      {/* Floating particles */}
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
           <div
@@ -58,11 +78,11 @@ export const HeroSection = () => {
             India's First AR-Driven Outdoor AdTech Platform transforming billboards, walls, and streets with Augmented Reality.
           </p>
 
-          {/* AR Experience Button */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-neon-cyan to-neon-purple text-white hover:opacity-90 transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold animate-glow"
+              onClick={handleLaunchAR}
             >
               <Camera className="mr-2 h-5 w-5" />
               Launch AR Experience
@@ -72,6 +92,7 @@ export const HeroSection = () => {
               variant="outline" 
               size="lg"
               className="border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg px-8 py-4 text-lg font-semibold"
+              onClick={handleWatchDemo}
             >
               Watch Demo
             </Button>
@@ -95,7 +116,6 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      {/* Bottom gradient */}
       <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-dark-bg to-transparent"></div>
     </section>
   );

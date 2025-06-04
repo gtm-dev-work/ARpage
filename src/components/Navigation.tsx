@@ -1,9 +1,29 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { toast } = useToast();
+
+  const handleBookDemo = () => {
+    console.log("Book Demo clicked");
+    toast({
+      title: "Demo Booking",
+      description: "Redirecting to demo booking form...",
+    });
+    // Backend integration point: Navigate to demo booking
+  };
+
+  const handleStartCampaign = () => {
+    console.log("Start Campaign clicked");
+    toast({
+      title: "Campaign Setup",
+      description: "Opening campaign creation wizard...",
+    });
+    // Backend integration point: Navigate to campaign setup
+  };
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-dark-bg/80 backdrop-blur-md border-b border-neon-cyan/20">
@@ -24,10 +44,17 @@ export const Navigation = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" className="border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg">
+            <Button 
+              variant="outline" 
+              className="border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg"
+              onClick={handleBookDemo}
+            >
               Book Demo
             </Button>
-            <Button className="bg-gradient-to-r from-neon-cyan to-neon-purple text-white hover:opacity-90">
+            <Button 
+              className="bg-gradient-to-r from-neon-cyan to-neon-purple text-white hover:opacity-90"
+              onClick={handleStartCampaign}
+            >
               Start Campaign
             </Button>
           </div>
@@ -52,10 +79,17 @@ export const Navigation = () => {
               <a href="#analytics" className="text-white/80 hover:text-neon-cyan transition-colors">Analytics</a>
               <a href="#demo" className="text-white/80 hover:text-neon-cyan transition-colors">Demo</a>
               <div className="flex flex-col space-y-2 pt-4">
-                <Button variant="outline" className="border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg">
+                <Button 
+                  variant="outline" 
+                  className="border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg"
+                  onClick={handleBookDemo}
+                >
                   Book Demo
                 </Button>
-                <Button className="bg-gradient-to-r from-neon-cyan to-neon-purple text-white hover:opacity-90">
+                <Button 
+                  className="bg-gradient-to-r from-neon-cyan to-neon-purple text-white hover:opacity-90"
+                  onClick={handleStartCampaign}
+                >
                   Start Campaign
                 </Button>
               </div>
