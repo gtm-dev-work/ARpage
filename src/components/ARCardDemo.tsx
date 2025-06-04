@@ -7,10 +7,10 @@ export const ARCardDemo = () => {
         {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="font-orbitron font-bold text-3xl md:text-5xl mb-4 text-white">
-            AR Visiting Card <span className="text-neon-cyan">Demo</span>
+            From Paper to <span className="text-neon-cyan">Hologram</span>
           </h2>
           <p className="text-xl text-white/60 max-w-2xl mx-auto">
-            Transform traditional business cards into interactive 3D experiences.
+            Elevate your identity—Transform your business card into an interactive AR experience with a 3D avatar that speaks, gestures, and connects instantly.
           </p>
         </div>
 
@@ -20,7 +20,7 @@ export const ARCardDemo = () => {
             {/* Traditional Card */}
             <div className="text-center">
               <h3 className="font-orbitron font-bold text-xl mb-6 text-white/60">
-                Traditional Business Card
+                Physical Business Card
               </h3>
               <div className="relative mx-auto w-80 h-48 bg-white rounded-2xl p-6 shadow-2xl">
                 <div className="text-dark-bg">
@@ -37,23 +37,27 @@ export const ARCardDemo = () => {
                   </div>
                 </div>
               </div>
+              <p className="mt-4 text-white/50 text-sm max-w-sm mx-auto">
+                Traditional cards are limited to what they print. No interactivity. No updates. No WOW factor.
+              </p>
             </div>
 
             {/* AR Card */}
             <div className="text-center">
               <h3 className="font-orbitron font-bold text-xl mb-6 text-neon-cyan">
-                AR Business Card
+                AR-Enhanced Business Card
               </h3>
               <div className="relative">
-                <div className="relative mx-auto w-80 h-64 bg-gradient-to-br from-neon-cyan/20 to-neon-purple/20 backdrop-blur-sm rounded-2xl p-6 border border-neon-cyan/30 animate-glow">
-                  {/* Floating Avatar */}
-                  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-neon-cyan to-neon-purple rounded-full flex items-center justify-center animate-float shadow-lg">
-                    <span className="text-2xl">👤</span>
+                <div className="relative mx-auto w-80 h-72 bg-gradient-to-br from-neon-cyan/20 to-neon-purple/20 backdrop-blur-sm rounded-2xl p-6 border border-neon-cyan/30 animate-glow shadow-xl">
+                  
+                  {/* Holographic Avatar */}
+                  <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-gradient-to-tr from-neon-cyan to-neon-purple rounded-full flex items-center justify-center animate-float-glow shadow-2xl">
+                    <span className="text-4xl">🧍‍♂️</span>
                   </div>
 
-                  <div className="text-white pt-10">
+                  <div className="text-white pt-16">
                     <h4 className="font-orbitron font-bold text-lg mb-1">Goutam Kumar</h4>
-                    <p className="text-sm mb-4 text-neon-cyan">Founder & CEO</p>
+                    <p className="text-sm mb-4 text-neon-cyan">Founder & CEO, Talking in 3D</p>
 
                     {/* Action Buttons */}
                     <div className="space-y-2">
@@ -81,7 +85,7 @@ export const ARCardDemo = () => {
                     </div>
                   </div>
 
-                  {/* AR Effects */}
+                  {/* Animated Particles */}
                   <div className="absolute inset-0 pointer-events-none">
                     {[...Array(8)].map((_, i) => (
                       <div
@@ -97,14 +101,14 @@ export const ARCardDemo = () => {
                   </div>
                 </div>
 
-                {/* Speech Bubble */}
+                {/* Speech AI Simulation */}
                 <div className="mt-6 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-neon-cyan/20">
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-gradient-to-r from-neon-cyan to-neon-purple rounded-full flex items-center justify-center animate-pulse-glow">
                       <span className="text-sm">🗣️</span>
                     </div>
                     <p className="text-white/80 text-sm italic text-left">
-                      "Hello! I'm Goutam from The Ad Project. Tap the buttons to connect with me instantly!"
+                      "Hi, I’m your holographic assistant. Ready to pitch your brand in style!"
                     </p>
                   </div>
                 </div>
@@ -115,9 +119,9 @@ export const ARCardDemo = () => {
           {/* Feature Highlights */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
             {[
-              { icon: "🎯", title: "Interactive", text: "Direct links to email, calls, and social media" },
-              { icon: "📊", title: "Analytics", text: "Track scans, interactions, and conversions" },
-              { icon: "🌐", title: "Shareable", text: "Easy to share and update in real-time" },
+              { icon: "📡", title: "Holographic Avatars", text: "Greet clients with a life-like 3D persona" },
+              { icon: "📈", title: "Real-time Updates", text: "Change links, branding, and messages anytime" },
+              { icon: "🎥", title: "Video Pitches", text: "Showcase your intro pitch in augmented 3D space" },
             ].map((feature, idx) => (
               <div
                 key={idx}
@@ -136,7 +140,7 @@ export const ARCardDemo = () => {
               size="lg"
               className="bg-gradient-to-r from-neon-cyan to-neon-purple text-white hover:opacity-90 px-8 py-4"
             >
-              Create My AR Card
+              Create My Holographic Card
             </Button>
           </div>
         </div>
