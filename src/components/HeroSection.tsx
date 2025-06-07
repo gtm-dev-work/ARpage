@@ -52,12 +52,12 @@ export const HeroSection = () => {
           <div className="relative mb-8">
             <div className="w-32 h-32 mx-auto mb-6 relative">
               <img 
-                src="https://raw.githubusercontent.com/gtm-dev-work/ARpage/refs/heads/main/public/indian%20map.jpg" 
+                src="https://raw.githubusercontent.com/gtm-dev-work/ARpage/refs/heads/main/public/ChatGPT%20Image%20Jun%204%2C%202025%2C%2011_38_44%20AM.png" 
                 alt="India Map Visualization" 
                 className="w-full h-full object-cover rounded-2xl opacity-60 animate-glow"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-neon-cyan/20 to-neon-purple/20 rounded-2xl flex items-center justify-center">
-                <span className="text-2xl font-orbitron font-bold text-neon-cyan">🇮🇳</span>
+                <span className="text-2xl font-orbitron font-bold text-neon-cyan"></span>
               </div>
             </div>
           </div>
