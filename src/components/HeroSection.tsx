@@ -52,7 +52,7 @@ export const HeroSection = () => {
           <div className="relative mb-8">
             <div className="w-32 h-32 mx-auto mb-6 relative">
               <img 
-                src="https://raw.githubusercontent.com/gtm-dev-work/ARpage/refs/heads/main/public/ChatGPT%20Image%20Jun%204%2C%202025%2C%2011_38_44%20AM.png" 
+                src="https://raw.githubusercontent.com/gtm-dev-work/ARpage/refs/heads/main/public/ChatGPT%20Image%20Jun%204%2C%202025%2C%2011_38_44%20AM-min.png" 
                 alt="India Map Visualization" 
                 className="w-full h-full object-cover rounded-2xl opacity-60 animate-glow"
               />
