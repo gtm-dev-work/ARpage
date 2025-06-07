@@ -8,12 +8,11 @@ import { ARCardDemo } from "@/components/ARCardDemo";
 import { AnalyticsSection } from "@/components/AnalyticsSection";
 import { SmartIndiaSection } from "@/components/SmartIndiaSection";
 import { FinalCTASection } from "@/components/FinalCTASection";
-import { Navigation } from "@/components/Navigation";
+
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-dark-bg text-white font-space overflow-x-hidden">
-      <Navigation />
       <HeroSection />
       <WhyARSection />
       <ServicesGallery />
