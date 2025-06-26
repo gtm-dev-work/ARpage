@@ -16,7 +16,7 @@ export const ARCardDemo = () => {
 
         {/* Card Comparison */}
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Traditional Card */}
             <div className="text-center">
               <h3 className="font-orbitron font-bold text-xl mb-6 text-white/60">
@@ -42,20 +42,23 @@ export const ARCardDemo = () => {
               </p>
             </div>
 
-            {/* AR Card */}
+            {/* AR-Enhanced Card */}
             <div className="text-center">
               <h3 className="font-orbitron font-bold text-xl mb-6 text-neon-cyan">
                 AR-Enhanced Business Card
               </h3>
-              <div className="relative">
-                <div className="relative mx-auto w-80 h-72 bg-gradient-to-br from-neon-cyan/20 to-neon-purple/20 backdrop-blur-sm rounded-2xl p-6 border border-neon-cyan/30 animate-glow shadow-xl">
-                  
-                  {/* Holographic Avatar */}
-                  <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-gradient-to-tr from-neon-cyan to-neon-purple rounded-full flex items-center justify-center animate-float-glow shadow-2xl">
+              <div className="relative flex flex-col items-center">
+                {/* Holographic Pop-up */}
+                <div className="relative z-20 -mb-12">
+                  <div className="w-24 h-24 bg-gradient-to-tr from-neon-cyan to-neon-purple rounded-full flex items-center justify-center animate-pop-float-glow shadow-2xl scale-110">
                     <span className="text-4xl">🧍‍♂️</span>
                   </div>
+                  <div className="w-16 h-2 mt-1 bg-neon-cyan/40 rounded-full blur-sm animate-pulse" />
+                </div>
 
-                  <div className="text-white pt-16">
+                {/* Card Base */}
+                <div className="relative w-80 h-72 bg-gradient-to-br from-neon-cyan/20 to-neon-purple/20 backdrop-blur-sm rounded-2xl p-6 border border-neon-cyan/30 shadow-xl">
+                  <div className="text-white pt-10">
                     <h4 className="font-orbitron font-bold text-lg mb-1">Goutam Kumar</h4>
                     <p className="text-sm mb-4 text-neon-cyan">Founder & CEO, Talking in 3D</p>
 
@@ -84,30 +87,15 @@ export const ARCardDemo = () => {
                       </Button>
                     </div>
                   </div>
-
-                  {/* Animated Particles */}
-                  <div className="absolute inset-0 pointer-events-none">
-                    {[...Array(8)].map((_, i) => (
-                      <div
-                        key={i}
-                        className="absolute w-1 h-1 bg-neon-cyan rounded-full animate-float"
-                        style={{
-                          left: `${Math.random() * 100}%`,
-                          top: `${Math.random() * 100}%`,
-                          animationDelay: `${Math.random() * 2}s`,
-                        }}
-                      />
-                    ))}
-                  </div>
                 </div>
 
-                {/* Speech AI Simulation */}
-                <div className="mt-6 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-neon-cyan/20">
-                  <div className="flex items-center space-x-3">
+                {/* Speech Bubble */}
+                <div className="mt-6 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-neon-cyan/20 max-w-xs text-left">
+                  <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 bg-gradient-to-r from-neon-cyan to-neon-purple rounded-full flex items-center justify-center animate-pulse-glow">
                       <span className="text-sm">🗣️</span>
                     </div>
-                    <p className="text-white/80 text-sm italic text-left">
+                    <p className="text-white/80 text-sm italic">
                       "Hi, I’m your holographic assistant. Ready to pitch your brand in style!"
                     </p>
                   </div>
