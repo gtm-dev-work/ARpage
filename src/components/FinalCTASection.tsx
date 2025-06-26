@@ -1,58 +1,53 @@
-
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
 export const FinalCTASection = () => {
   const { toast } = useToast();
+  const [showModal, setShowModal] = useState(false);
 
   const handleBookDemo = () => {
     console.log("Book Demo clicked from CTA section");
     toast({
       title: "Demo Booking",
-      description: "Opening demo scheduling form...",
+      description: "This feature is under development. Get early access below!",
     });
-    // Backend integration point: Navigate to demo booking
+    setShowModal(true);
   };
 
   const handleStartCampaign = () => {
-    console.log("Start AR Campaign clicked");
     toast({
       title: "Campaign Creation",
       description: "Launching AR campaign builder...",
     });
-    // Backend integration point: Navigate to campaign creation
   };
 
   const handleBecomePartner = () => {
-    console.log("Become Partner clicked");
     toast({
       title: "Partner Application",
       description: "Opening partner registration form...",
     });
-    // Backend integration point: Navigate to partner signup
   };
 
   const handleJoinInitiative = () => {
-    console.log("Join Initiative clicked");
     toast({
       title: "Government Initiative",
       description: "Redirecting to government collaboration portal...",
     });
-    // Backend integration point: Navigate to government portal
   };
 
   const handleCreateContent = () => {
-    console.log("Create Content clicked");
     toast({
       title: "Creator Portal",
       description: "Opening AR content creation platform...",
     });
-    // Backend integration point: Navigate to creator dashboard
   };
+
+  const closeModal = () => setShowModal(false);
 
   return (
     <section className="py-20 relative overflow-hidden">
-      {/* Background with animated elements */}
+      {/* Floating Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark-bg via-neon-purple/10 to-dark-bg">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(0,242,255,0.1),transparent)]"></div>
       </div>
@@ -66,7 +61,7 @@ export const FinalCTASection = () => {
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               animationDelay: `${Math.random() * 6}s`,
-              animationDuration: `${4 + Math.random() * 4}s`
+              animationDuration: `${4 + Math.random() * 4}s`,
             }}
           />
         ))}
@@ -87,15 +82,15 @@ export const FinalCTASection = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-gradient-to-r from-neon-cyan to-blue-500 text-white hover:opacity-90 transform hover:scale-105 transition-all duration-300 px-12 py-6 text-xl font-semibold animate-glow"
             onClick={handleBookDemo}
           >
             📱 Book Demo
           </Button>
-          
-          <Button 
+
+          <Button
             size="lg"
             className="bg-gradient-to-r from-neon-purple to-pink-500 text-white hover:opacity-90 transform hover:scale-105 transition-all duration-300 px-12 py-6 text-xl font-semibold"
             onClick={handleStartCampaign}
@@ -105,12 +100,13 @@ export const FinalCTASection = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 mb-16">
+          {/* Partner Card */}
           <div className="text-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-neon-cyan/20 hover:border-neon-cyan/50 transition-all duration-300 group">
             <div className="text-4xl mb-4 group-hover:animate-float">🤝</div>
             <h3 className="font-orbitron font-bold text-xl mb-3 text-white group-hover:text-neon-cyan transition-colors">Partners</h3>
             <p className="text-white/60 text-sm mb-4">Join our partner network and offer AR solutions to your clients</p>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg"
               onClick={handleBecomePartner}
             >
@@ -118,12 +114,13 @@ export const FinalCTASection = () => {
             </Button>
           </div>
 
+          {/* Government Card */}
           <div className="text-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-neon-purple/20 hover:border-neon-purple/50 transition-all duration-300 group">
             <div className="text-4xl mb-4 group-hover:animate-float">🏛️</div>
             <h3 className="font-orbitron font-bold text-xl mb-3 text-white group-hover:text-neon-purple transition-colors">Government</h3>
             <p className="text-white/60 text-sm mb-4">Collaborate with us for public service and tourism campaigns</p>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-dark-bg"
               onClick={handleJoinInitiative}
             >
@@ -131,12 +128,13 @@ export const FinalCTASection = () => {
             </Button>
           </div>
 
+          {/* Creators Card */}
           <div className="text-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-green-400/20 hover:border-green-400/50 transition-all duration-300 group">
             <div className="text-4xl mb-4 group-hover:animate-float">🎨</div>
             <h3 className="font-orbitron font-bold text-xl mb-3 text-white group-hover:text-green-400 transition-colors">Creators</h3>
             <p className="text-white/60 text-sm mb-4">Design AR experiences and monetize your creative skills</p>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="border-green-400 text-green-400 hover:bg-green-400 hover:text-dark-bg"
               onClick={handleCreateContent}
             >
@@ -145,7 +143,7 @@ export const FinalCTASection = () => {
           </div>
         </div>
 
-        {/* Footer with India Map */}
+        {/* Footer */}
         <footer className="relative">
           <div className="bg-gradient-to-r from-neon-cyan/10 to-neon-purple/10 backdrop-blur-sm rounded-3xl p-8 border border-neon-cyan/20">
             <div className="text-center mb-8">
@@ -161,22 +159,14 @@ export const FinalCTASection = () => {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              <div className="text-center">
-                <div className="w-4 h-4 bg-green-400 rounded-full mx-auto mb-2 animate-pulse-glow"></div>
-                <span className="text-white/60 text-xs">Mumbai - 342 active</span>
-              </div>
-              <div className="text-center">
-                <div className="w-4 h-4 bg-neon-cyan rounded-full mx-auto mb-2 animate-pulse-glow"></div>
-                <span className="text-white/60 text-xs">Delhi - 289 active</span>
-              </div>
-              <div className="text-center">
-                <div className="w-4 h-4 bg-neon-purple rounded-full mx-auto mb-2 animate-pulse-glow"></div>
-                <span className="text-white/60 text-xs">Bangalore - 156 active</span>
-              </div>
-              <div className="text-center">
-                <div className="w-4 h-4 bg-yellow-400 rounded-full mx-auto mb-2 animate-pulse-glow"></div>
-                <span className="text-white/60 text-xs">Chennai - 98 active</span>
-              </div>
+              {["Mumbai", "Delhi", "Bangalore", "Chennai"].map((city, i) => (
+                <div key={city} className="text-center">
+                  <div className={`w-4 h-4 ${["bg-green-400", "bg-neon-cyan", "bg-neon-purple", "bg-yellow-400"][i]} rounded-full mx-auto mb-2 animate-pulse-glow`}></div>
+                  <span className="text-white/60 text-xs">
+                    {city} - {[342, 289, 156, 98][i]} active
+                  </span>
+                </div>
+              ))}
             </div>
 
             <div className="text-center text-white/40 text-sm">
@@ -186,6 +176,30 @@ export const FinalCTASection = () => {
           </div>
         </footer>
       </div>
+
+      {/* Modal Overlay */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-dark-bg border border-neon-cyan/30 rounded-2xl p-8 max-w-md w-full text-center shadow-2xl animate-fade-in">
+            <h3 className="text-2xl font-orbitron font-bold text-white mb-4">🚀 Book AR Demo</h3>
+            <p className="text-white/70 mb-6">
+              The booking portal is currently in development. Want early access and priority onboarding?
+            </p>
+            <Button
+              className="bg-gradient-to-r from-neon-cyan to-neon-purple text-white w-full mb-4"
+              onClick={() => {
+                toast({ title: "Access Granted", description: "You've been added to the early access list!" });
+                closeModal();
+              }}
+            >
+              ✅ Get Early Access
+            </Button>
+            <Button variant="outline" className="w-full border-white/20 text-white/60" onClick={closeModal}>
+              Close
+            </Button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
