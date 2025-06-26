@@ -1,6 +1,16 @@
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast"; // ✅ Import toast
 
 export const ARCardDemo = () => {
+  const { toast } = useToast(); // ✅ Init toast
+
+  const handleCTA = () => {
+    toast({
+      title: "🚧 Under Development",
+      description: "The holographic card creation feature is coming soon. Stay tuned!",
+    });
+  };
+
   return (
     <section className="py-20 relative">
       <div className="container mx-auto px-4">
@@ -127,6 +137,7 @@ export const ARCardDemo = () => {
             <Button
               size="lg"
               className="bg-gradient-to-r from-neon-cyan to-neon-purple text-white hover:opacity-90 px-8 py-4"
+              onClick={handleCTA} // ✅ Trigger the toast here
             >
               Create My Holographic Card
             </Button>
