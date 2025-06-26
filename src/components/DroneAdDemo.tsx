@@ -1,6 +1,24 @@
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast"; // ✅ Import toast hook
+import { useState } from "react"; // Optional: if you want to add a loader
 
 export const DroneAdDemo = () => {
+  const { toast } = useToast();
+
+  const handleBookClick = () => {
+    toast({
+      title: "🚧 Booking Unavailable",
+      description: "Sky campaign booking is under development.",
+    });
+  };
+
+  const handlePricingClick = () => {
+    toast({
+      title: "💸 Pricing Coming Soon",
+      description: "Pricing details will be updated shortly. Stay tuned!",
+    });
+  };
+
   return (
     <section className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-dark-bg to-neon-purple/5"></div>
@@ -33,16 +51,19 @@ export const DroneAdDemo = () => {
                 Imagine your brand soaring above Mumbai, Delhi, or Bangalore with interactive AR displays that respond to viewer engagement. Perfect for festivals, product launches, and major events.
               </p>
 
+              {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   size="lg"
                   className="bg-gradient-to-r from-neon-cyan to-blue-500 text-white hover:opacity-90"
+                  onClick={handleBookClick} // ✅ Book button toast
                 >
                   Book Sky Campaign
                 </Button>
                 <Button 
                   variant="outline"
                   size="lg"
+                  onClick={handlePricingClick} // ✅ Pricing button toast
                   className="border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white"
                 >
                   View Pricing
